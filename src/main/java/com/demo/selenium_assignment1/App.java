@@ -8,7 +8,8 @@ public class App {
 	public static void main(String[] args) {
 		Facebook fb = new Facebook();
 		fb.driverSetup();
-		fb.login();
+//		fb.login();
 		fb.incorrectPassword();
+//		fb.closeDriver();
 	}
 }

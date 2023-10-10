@@ -2,6 +2,7 @@ package com.demo.selenium_assignment1;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
@@ -16,6 +17,12 @@ public class AppTest {
 	@Before
 	public void setUp() {
 		fb = new Facebook();
+		fb.driverSetup();
+	}
+
+	@After
+	public void after() {
+		fb.driver.close();
 	}
 
 	@Test

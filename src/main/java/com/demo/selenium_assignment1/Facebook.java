@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Facebook {
-	final static String USERNAME = "test6842test1@gmail.com";
+	final static String USERNAME = "test6842test@gmail.com";
 	final static String PASSWORD = "test123test123!!";
 	final static String INCORRECT_PASSWORD = "test123test123!";
 	final static String user = "Justin Teest";
@@ -35,7 +35,7 @@ public class Facebook {
 //		testIncorrectPassword();
 
 		// Close the driver
-		driver.close();
+//		driver.close();
 	}
 
 	public WebElement login() {
@@ -52,7 +52,7 @@ public class Facebook {
 
 			// Get logged user to check text
 			WebElement loggedInUser = driver.findElement(By.cssSelector("div.x1iyjqo2 div.x1qjc9v5"));
-
+			System.out.println("***************************************" + loggedInUser.getText());
 			return loggedInUser;
 		} catch (Exception e) {
 			System.out.print(e);
@@ -80,11 +80,17 @@ public class Facebook {
 
 			// Get incorrect password msg to check text
 			WebElement incorrectPasswordMsg = driver.findElement(By.cssSelector("div._9ay7"));
+			System.out.println("***************************************" + incorrectPasswordMsg.getText());
 			return incorrectPasswordMsg;
 		} catch (Exception e) {
 			System.out.print(e);
 		}
 		return null;
+
+	}
+
+	public void closeDriver() {
+		driver.close();
 
 	}
 }
