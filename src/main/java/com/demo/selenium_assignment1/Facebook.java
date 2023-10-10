@@ -18,9 +18,10 @@ public class Facebook {
 	public static WebDriver driver;
 
 	public void driverSetup() {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\jc561\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-
+//		System.setProperty("webdriver.chrome.driver",
+//				"C:\\Users\\jc561\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+//		WebDriverManager.chromedriver().setup();
 		// setup chrome parameters
 		// Note: headless means it will execute in the background w/o brower
 		ChromeOptions chromeOptions = new ChromeOptions();
@@ -86,11 +87,14 @@ public class Facebook {
 			System.out.print(e);
 		}
 		return null;
-
 	}
 
 	public void closeDriver() {
 		driver.close();
 
+	}
+
+	public void deleteCookie() {
+		driver.manage().deleteAllCookies();
 	}
 }
