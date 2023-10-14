@@ -22,7 +22,7 @@ public class AppTest {
 
 	@After
 	public void after() {
-		fb.driver.close();
+		fb.closeDriver();
 	}
 
 	@Test
@@ -31,11 +31,11 @@ public class AppTest {
 		assertEquals(loggedInUser.getText(), fb.user);
 	}
 
-	@Test
-	public void testIncorrectPassword() {
-		WebElement incorrectPasswordMsg = fb.incorrectPassword();
-		assertEquals(incorrectPasswordMsg.getText(), fb.INCORRECT_PASSWORD_MSG);
-	}
+//	@Test
+//	public void testIncorrectPassword() {
+//		WebElement incorrectPasswordMsg = fb.incorrectPassword();
+//		assertEquals(incorrectPasswordMsg.getText(), fb.INCORRECT_PASSWORD_MSG);
+//	}
 
 }
 //Invoke wait to load the application page

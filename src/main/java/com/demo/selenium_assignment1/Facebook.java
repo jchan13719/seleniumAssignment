@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Facebook {
 	final static String USERNAME = "test6842test@gmail.com";
 	final static String PASSWORD = "test123test123!!";
@@ -20,8 +22,8 @@ public class Facebook {
 	public void driverSetup() {
 //		System.setProperty("webdriver.chrome.driver",
 //				"C:\\Users\\jc561\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-//		WebDriverManager.chromedriver().setup();
+//		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		// setup chrome parameters
 		// Note: headless means it will execute in the background w/o brower
 		ChromeOptions chromeOptions = new ChromeOptions();

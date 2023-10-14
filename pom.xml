@@ -11,13 +11,7 @@
   <name>selenium-assignment1</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
-	
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/jchan13719/seleniumAssignment.git</url>
-        </repository>
-    </distributionManagement>
+
     
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -37,6 +31,11 @@
 	    <groupId>org.seleniumhq.selenium</groupId>
 	    <artifactId>selenium-java</artifactId>
 	    <version>3.141.59</version>
+	</dependency>
+	<dependency>
+		<groupId>io.github.bonigarcia</groupId>
+		<artifactId>webdrivermanager</artifactId>
+		<version>5.5.3</version>
 	</dependency>
    
   </dependencies>
